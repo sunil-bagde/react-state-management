@@ -1,8 +1,8 @@
 import React from 'react'
-import {useTheme} from './appContext'
+import {useTheme} from './themeContext'
 
 let Content = () => {
-  let { theme } = useTheme();
+  let { theme } = useTheme(); 
     return (
         <div style={{ color: theme === 'dark' ? 'black' : 'red' }}>
              Here's our main content

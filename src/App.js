@@ -1,11 +1,13 @@
 // import AppUseState from './useState'   <AppUseState />
 // import AppUseReducer from './useReducer'; <AppUseReducer />
+// import AppUseContext from './useContext/useContext'; //       <AppUseContext />
+import AppUseContext1 from './useContext/useContext1'
 
-import AppUseContext from './useContext'
+
 function App() {
   return (
     <div>
-      <AppUseContext />
+      <AppUseContext1 />
     </div>
   );
 }
