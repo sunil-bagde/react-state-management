@@ -10,10 +10,13 @@ let ThemeControl = () => {
                     border: 0,
                     background: "transparent",
                     cursor:"pointer",
-                    outline: 'none'
+                    outline: 'none',
+                    padding:10,
+                    paddingRight:20
+
                 }}
             >
-                   <span title = "switch theme">
+                   <span title = "switch theme" style={{fontSize: 24}}>
               {theme === "dark" ? "🌙" : "☀️"}
             </span>
             </button>

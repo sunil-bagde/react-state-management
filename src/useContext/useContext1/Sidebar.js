@@ -13,7 +13,7 @@ let Sidebar = () => {
                 background: "#fff",
                 borderBottom: "solid 2px #ffc0cb7a",
             }}
-        ><p></p>
+        ><h2> <i> {"<"} </i> ThemeControl   <i> {"/>"}</i></h2>
             <ThemeControl />
         </div>
     );
