@@ -1,18 +1,10 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import useFetch from "./useFetch";
 
-async function fetchPicture(date, setPicture) { 
-    let response = await fetch(
+function usePicture(date) {
+    let { data, loading, error } = useFetch(
         `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`
     );
-    let json  =  await response.json() 
-  
-    setPicture(json);
-}
-function usePicture(date) {
-    let [picture, setPicture] = useState();
-    useEffect(() => {
-        fetchPicture(date, setPicture);
-    }, [date]);
-    return picture ;
+    return { data, loading, error };
 }
 export default usePicture;

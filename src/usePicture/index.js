@@ -3,10 +3,10 @@ import usePicture from "./usePicture";
 
 let UsePictureApp = () => {
     const [date, setDate] = useState("2020-05-05");
-    console.log("date", date);
-    let picture = usePicture(date);
-    console.log("picture", picture);
-    if (!picture) {
+ 
+    let { data: picture, loading } = usePicture(date);
+ 
+    if (loading) {
         return <p>Loading...</p>;
     }
     let { title, explanation, hdurl } = picture;
